@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>聊天室</title>
+<link rel="stylesheet" href="css1.css" type="text/css" />     
+<script type="text/javascript" src="js1.js"></script>
+</head>
+   <body>
+       <div id="f">
+            <header id="headx">
+                    <h1>畅聊一次</h1>
+                </header>
+            <div id="main">
+                <div id="log_in" class="box">
+                    <form>
+                            <fieldset id="login_1" class="form">
+                                    <legend class="t">登录</legend>      
+                            用户名:<br>
+                            <input type="text" id="firstname1" placeholder="用户名">
+                            <br>
+                            密码:<br>
+                            <input type="password" id="lastname1" >
+                            <br><br>
+                           
+                            <select id="log_state">
+                                    <option value="0" selected="selected">在线</option>
+                                    <option value="1">隐身</option>
+                             </select>
+                             <p class="input" onclick="submit(0);">submit</p>
+                             
+                             <p  id="wanning_1"></p>
+                            </fieldset>
+                            <p class="chang_link" onclick="ex('0');">
+                                    <a>
+                                            <font style="vertical-align: inherit;">注册</font>
+                                    </a>
+                                </p>
+                    </form>
+                </div>
+                <div id="register"  class="box">
+                    <form >
+                        <fieldset id="register_1" class="form">
+                                <legend class="t">注册</legend>
+                                
+                                用户名:<br>
+                                <input type="text" id="firstname" placeholder="用户名">
+                                <br>
+                                 密码:<br>
+                                <input type="password" id="lastname" >
+                                <br>
+                                <select id="log_state1">
+                                        <option value="0" selected="selected">在线</option>
+                                        <option value="1">隐身</option>
+                                 </select>
+                                <br><br>
+                                <p class="input" onclick="submit(1);">submit</p>
+                               <p id="wanning_2"></p>
+                        </fieldset>
+                        <p class="chang_link" onclick="ex('1');">
+                                <a>
+                                        <font style="vertical-align: inherit;">登录</font>
+                                </a>
+                            </p>
+                    </form>
+                </div>
+            </div>
+
+       </div>
+    <div id="second">
+        <div id="left">
+            <div id="information">
+             <div id="information_1">
+                    <select id="type" onchange="exchang_state();">    
+                        <option id="s1" value="0" selected="selected">在线</option>      
+                        <option id="s2" value="1">离线</option>
+                        <option id="s3" value="2">隐身</option>      
+                    </select> 
+            </div>
+           <br>
+            </div>
+                
+            <div id="l">
+               <p><h2 class="list_head">List about online</h2></p>
+                <ul id="list" class="list-unstyled">
+                    <li id="user_ALL" class="friend" onclick="talkTo('ALL');">0/ALL</li>
+                </ul>
+            </div>
+            <p class="list_head">online list</p>
+           
+        </div>
+
+        <div id="right">
+            <div id="xx"><h1 id ="head">ALL</h1></div>
+            <div id="chat">
+            <div id="p_ALL" class="message"></div>
+            </div>
+            <div id="w">
+               <p id="xxx"><textarea id="text" wrap="hard" multiple="multiple"/></textarea> 
+                <button class="q"onclick="sendTo();">发送消息</button></p>
+                <p id="wanning_3"></p>
+               
+            </div>
+        </div>
+    </div>  
+
+  </body>
+</html>
